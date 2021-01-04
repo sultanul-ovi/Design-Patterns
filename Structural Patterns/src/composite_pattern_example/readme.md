@@ -9,7 +9,7 @@ We know that in composite pattern, an object can be made up of similar type of o
 # Class diagram is given below:
 ![image.png](class_diagram_ageOFvillagers.png)
 # Example of an output is given below:
-![image.png](composite output.png)
+![image.png](composite_output.png)
 
 
 As the snippet shows, a village can have different types of objects. A object can use different types of simple objects. It will print a hierarchical representation of the village.
