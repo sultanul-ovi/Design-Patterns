@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package singleton_pattern;
+
+/**
+ * @author Ovi
+ *
+ */
+public class SingletonPatternDemo {
+
+}

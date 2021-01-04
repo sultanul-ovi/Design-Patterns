@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package bridge_pattern;
+
+/**
+ * @author Ovi
+ *
+ */
+public class BridgePatternDemo {
+
+}

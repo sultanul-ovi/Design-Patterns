@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package composite_pattern_example;
+
+/**
+ * @author Ovi
+ *
+ */
+public class BaseShape {
+
+}

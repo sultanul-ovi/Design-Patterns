@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package composite_pattern_example;
+
+/**
+ * @author Ovi
+ *
+ */
+public class AgeOfVillagers {
+    public static void main(String[] args) {
+    	BaseShape greencircle = new BaseShape("Circle","small","Green");
+    	BaseShape brownline = new BaseShape("Line","small","Brown");
+
+    	BaseShape tree = new BaseShape("Tree","small","Green");
+        tree.add(greencircle);
+        tree.add(brownline);
+
+        BaseShape whiteplane = new BaseShape("Plane","small","White");
+        BaseShape whitecube = new BaseShape("Cube","small","White");
+        whitecube.add(whiteplane);
+
+        BaseShape graytriangle = new BaseShape("Triangle","small","Gray");
+        BaseShape graypyramid = new BaseShape("Pyramid","small","Gray");
+        graypyramid.add(graytriangle);
+
+        BaseShape house = new BaseShape("House","small","Gray-White");
+        house.add(whitecube);
+        house.add(graypyramid);
+
+        BaseShape bluerectangle = new BaseShape("Rectangle","small","Blue");
+        BaseShape blackhalfcircle = new BaseShape("Half-Circle","small","Black");
+        BaseShape pound = new BaseShape("Pound","small","Blue");
+        pound.add(bluerectangle);
+        pound.add(blackhalfcircle);
+
+        BaseShape village = new BaseShape("Village","small","Random");
+        village.add(house);
+        village.add(tree);
+        village.add(pound);
+
+        System.out.println(village);
+        village.printContains();
+
+        System.out.println(house);
+        house.printContains();
+    }
+}

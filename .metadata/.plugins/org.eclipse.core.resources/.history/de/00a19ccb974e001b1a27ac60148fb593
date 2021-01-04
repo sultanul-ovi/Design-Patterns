@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package composite_pattern_example;
+
+/**
+ * @author Ovi
+ *
+ */
+public class AgeOfVillagers {
+    public static void main(String[] args) {
+    	BaseShape greencircle = new BaseShape("Circle","Green");
+    	BaseShape brownline = new BaseShape("Line","Brown");
+
+    	BaseShape tree = new BaseShape("Tree","Green");
+        tree.add(greencircle);
+        tree.add(brownline);
+
+        BaseShape whiteplane = new BaseShape("Plane","White");
+        BaseShape whitecube = new BaseShape("Cube","White");
+        whitecube.add(whiteplane);
+
+        BaseShape graytriangle = new BaseShape("Triangle","Gray");
+        BaseShape graypyramid = new BaseShape("Pyramid","Gray");
+        graypyramid.add(graytriangle);
+
+        BaseShape house = new BaseShape("House","Gray-White");
+        house.add(whitecube);
+        house.add(graypyramid);
+
+        BaseShape bluerectangle = new BaseShape("Rectangle","Blue");
+        BaseShape blackhalfcircle = new BaseShape("Half-Circle","Black");
+        BaseShape pound = new BaseShape("Pound","Blue");
+        pound.add(bluerectangle);
+        pound.add(blackhalfcircle);
+
+        BaseShape village = new BaseShape("Village","Random");
+        village.add(house);
+        village.add(tree);
+        village.add(pound);
+
+        System.out.println(village);
+        village.printContains();
+
+        System.out.println(house);
+        house.printContains();
+    }
+}

@@ -1,0 +1,59 @@
+/**
+ * 
+ */
+package composite_pattern_example;
+
+/**
+ * @author Ovi
+ *
+ */
+public class AgeOfVillagers {
+    public static void main(String[] args) {
+    	
+    	BaseShape GreenSmallCircle = new BaseShape("Circle","Small","Green");
+    	BaseShape GreenLargeRectangle = new BaseShape("Rectangle","Large","Green");
+    	
+    	BaseShape BlueMediumRectangle = new BaseShape("Rectangle","Medium","Blue");
+    	BaseShape BlueSmallTriangle = new BaseShape("Triangle","Small","Blue");
+    	
+    	BaseShape RedLargeTriangle = new BaseShape("Triangle","Large","Red");
+    	BaseShape RedMediumCircle = new BaseShape("Circle","Medium","Red");
+    	
+    	
+    	
+    	BaseShape Tree = new BaseShape("Tree","Small","Green & Blue");
+        Tree.add(GreenSmallCircle);
+        Tree.add(BlueSmallTriangle);
+        
+        
+    	BaseShape House = new BaseShape("House","Medium","Red & Blue");
+        Tree.add(BlueMediumRectangle);
+        Tree.add(RedMediumCircle);
+
+        
+    	BaseShape WaterSource = new BaseShape("WaterSource","Large","Red & Green");
+        Tree.add(GreenLargeRectangle);
+        Tree.add(RedLargeTriangle);
+        
+        
+
+        BaseShape village = new BaseShape("Village","small","Random");
+        village.add(House);
+        village.add(Tree);
+        village.add(WaterSource);
+
+        
+        
+        System.out.println(village);
+        village.printContains();
+
+        System.out.println(House);
+        house.printContains();
+        
+        System.out.println(Tree);
+        village.printContains();
+
+        System.out.println(WaterSource);
+        house.printContains();
+    }
+}

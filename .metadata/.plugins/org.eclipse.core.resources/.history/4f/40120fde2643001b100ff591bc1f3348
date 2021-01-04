@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package facade_pattern;
+
+/**
+ * @author Ovi
+ *
+ */
+public class ShapeMaker {
+
+}

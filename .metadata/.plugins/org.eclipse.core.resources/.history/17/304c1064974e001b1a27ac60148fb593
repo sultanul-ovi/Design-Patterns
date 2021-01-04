@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package composite_pattern_example;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author Ovi
+ *
+ */
+public class BaseShape {
+    private String name;
+    private String color;
+    private List<BaseShape> contains;
+
+    public BaseShape(String name,String color){
+        this.name = name;
+        this.color = color;
+        contains = new ArrayList<BaseShape>();
+    }
+
+    public void add(BaseShape s){
+        contains.add(s);
+    }
+
+    public void remove(BaseShape s){
+        contains.remove(s);
+    }
+
+    public List<BaseShape> getContains(){
+        return contains;
+    }
+
+    public String toString(){
+        return ("Object: [Name: "+name+", color: "+color+"]");
+    }
+
+    public void printContains(){
+        System.out.println(name+" contains:");
+        for(BaseShape s:contains){
+            System.out.println(s);
+        }
+    }
+}
